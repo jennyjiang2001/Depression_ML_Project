@@ -1,0 +1,89 @@
+﻿file,var_nhanes,var_english,var_category,var_id,drop,modified,fill missing data,conversion,modify_group
+HUQ_L,HUQ010,health_status,Comorbidity,com01,,7&9->2,2,,3
+BPQ_L,BPQ020,hypertension,Comorbidity,com02,,2&7&9->0,0,,2
+DIQ_L,DIQ010,diabetes,Comorbidity,com03,,2&3&7&9->0,0,,4
+KIQ_U_L,KIQ025,dialysis,Comorbidity,com04,dropped,,,,
+MCQ_L,MCQ035,asthma,Comorbidity,com05,dropped,,,,
+MCQ_L,MCQ195,arthritis,Comorbidity,com06,dropped,,,,
+MCQ_L,MCQ160B,CHF,Comorbidity,com07,,2&7&9->0,0,,2
+MCQ_L,MCQ160E,heart_attack,Comorbidity,com08,,2&7&9->0,0,,2
+MCQ_L,MCQ160F,stroke,Comorbidity,com09,,2&7&9->0,0,,2
+MCQ_L,MCQ160P,COPD,Comorbidity,com10,,2&7&9->0,0,,2
+MCQ_L,MCQ510C,liver_cirrhosis,Comorbidity,com11,dropped,,,,
+MCQ_L,MCQ510D,liver_viralhepatitis,Comorbidity,com12,dropped,,,,
+MCQ_L,MCQ220,cancer,Comorbidity,com13,,2&7&9->0,0,,2
+MCQ_L,MCQ230A,cancer_type_1st,Comorbidity,com14,dropped,,,,
+OHQ_L,OHQ845,oral_health,Comorbidity,com15,,7&9->2,2,,3
+OHQ_L,OHQ680,oral_health_embarrased,Comorbidity,com16,,7&9->4,1,,5
+DEMO_L,RIAGENDR,gender,Demographics,demo01,,,,,
+DEMO_L,RIDAGEYR,age,Demographics,demo02,,,,,
+DEMO_L,DMDBORN4,birth_country,Demographics,demo03,,2&7&9->0,0,,2
+DEMO_L,DMDYRUSR,time_usa,Demographics,demo04,dropped,,0,,7
+DEMO_L,DMDEDUC2,education_level,Demographics,demo05,,7&9->4,4,,6
+DEMO_L,DMDMARTZ,marital_status,Demographics,demo06,,77&99->3,3,,10
+DEMO_L,RIDEXPRG,pregnancy_status,Demographics,demo07,,2&3->0,0,,13
+DEMO_L,DMDHHSIZ,household_ppl_count,Demographics,demo08,,,2,,12
+DEMO_L,INDFMPIR,income_poverty_ratio,Demographics,demo09,dropped,,,,
+HOQ_L,HOD051,housing_rooms,Demographics,demo10,,77&99->5,5,,11
+INQ_L,INDFMMPI,poverty_family,Demographics,demo11,,,2.78,,done
+INQ_L,INQ300,savings_20k,Demographics,demo12,,2&7&9->0,0,,2
+INQ_L,IND310,savings_amount,Demographics,demo13,dropped,,,,
+FNQ_L,FNQ410,difficulty_seeing,Function,func01,,7&9->1,1,,8
+FNQ_L,FNQ430,difficulty_hearing,Function,func02,,7&9->1,1,,8
+FNQ_L,FNQ440,difficulty_walking,Function,func03,,7&9->1,1,,8
+FNQ_L,FNQ450,difficulty_communicating,Function,func04,,7&9->1,1,,8
+FNQ_L,FNQ460,difficulty_remembering,Function,func05,,7&9->1,1,,8
+FNQ_L,FNQ470,difficulty_selfcare,Function,func06,,7&9->1,1,,8
+FNQ_L,FNQ490,difficulty_hands,Function,func07,,7&9->1,1,,8
+ALQ_L,ALQ121,alcohol_frequency,Habit,habit01,,77&99->5; 0->11,5,,14
+PAQ_L,PAD790Q,moderate_exercise_frequency,Habit,habit02,dropped after generating habit09,7777&9999->0,0,habit2*habit3,15
+PAQ_L,PAD790U,moderate_exercise_unit,Habit,habit03,dropped after generating habit09,"D->365, M->12, W->52, Y->1",0,,done
+PAQ_L,PAD680,sedentary_min,Habit,habit04,,7777&9999->0,0,,15
+SLQ_L,SLD012,sleep_hours_weekdays,Habit,habit05,,,7.7,,done
+SLQ_L,SLD013,sleep_hours_weekends,Habit,habit06,,,8.3,,done
+SMQ_L,SMD650,smoking_frequency_past30days,Habit,habit07,dropped,,,,
+WHQ_L,WHQ070,tried_lose_weight,Habit,habit08,,2&7&9->0,0,,2
+NEW,NEW01,moderate_exercise_amount,Habit,habit09,,,,habit2*habit3,
+HIQ_L,HIQ011,insurance,HealthCare,healthcare01,,2&7&9->0,0,,2
+HUQ_L,HUQ030,healthcare_place,HealthCare,healthcare02,,2&7&9->0,0,,2
+HUQ_L,HUQ042,healthcare_often_place,HealthCare,healthcare03,dropped,,,,
+HUQ_L,HUQ090,healthcare_mentalhealth_provider,HealthCare,healthcare04,,2&7&9->0,0,,2
+OCQ_L,OCD150,job_status,Job,job01,,3&4&7&9->0;1&2->1,0,,17
+OCQ_L,OCQ180,job_hours_lastweek,Job,job02,,77777&99999->0,0,,18
+OCQ_L,OCQ210,job_35hours_more,Job,job03,dropped,,,,
+OCQ_L,OCQ215,job_days_perweek,Job,job04,,77&99->0,0,,16
+OCQ_L,OCQ383,job_reason_absence,Job,job05,dropped,,,,
+AGP_L,LBXAGP,HgbA1c,Lab,lab01,dropped,,,,
+CBC_L,LBXWBCSI,WBC,Lab,lab02,dropped,,,,
+CBC_L,LBXRBCSI,RBC,Lab,lab03,dropped,,,,
+CBC_L,LBXHGB,Hgb,Lab,lab04,,,"GENDER""1""->14.8; GENDER""2""->13.2",,done
+CBC_L,LBXPLTSI,Platelet,Lab,lab05,dropped,,,,
+FOLATE_L,LBDRFOSI,folate,Lab,lab06,,,1216,,done
+GLU_L,LBDGLUSI,fasting_glucose,Lab,lab07,dropped,,,,
+HDL_L,LBDHDDSI,cholesterol_HDL,Lab,lab08,,,1.41,,done
+HEPB_S_L,LBXHBS,HBsAb,Lab,lab09,dropped,,,,
+HSCRP_L,LBXHSCRP,CRP,Lab,lab10,,,3.79,,done
+PBCD_L,LBXBPB,lead,Lab,lab11,,,0.956,,done
+PBCD_L,LBXTHG,mercury,Lab,lab12,,,1.16,,done
+TCHOL_L,LBDTCSI,cholesterol_total,Lab,lab13,dropped,,,,
+VID_L,LBXVD2MS,vitamin_D,Lab,lab14,,,4.8,,done
+FNQ_L,FNQ510,worried_frequency,MentalHealth,mental01,dropped,7&9->3,3,,9
+FNQ_L,FNQ520,worried_level,MentalHealth,mental02,dropped,7&9->2,2,,3
+FNQ_L,FNQ530,depressed_frequency,MentalHealth,mental03,dropped,7&9->4,4,,6
+FNQ_L,FNQ540,depressed_level,MentalHealth,mental04,dropped,7&9->2,2,,3
+BMX_L,BMXWT,weight_kg,PhysicalExam,physical01,,,"GENDER""1""->89.4; GENDER""2""->77.9",,done
+BMX_L,BMXHT,height_cm,PhysicalExam,physical02,,,"GENDER""1""->174.8; GENDER""2""->161.1",,done
+BMX_L,BMXBMI,BMI,PhysicalExam,physical03,,,"GENDER""1""->29.2; GENDER""2""->30.0",,done
+BPXO_L,BPXOSY1,BP_systolic,PhysicalExam,physical04,,,"GENDER""1""->125; GENDER""2""->120",,done
+BPXO_L,BPXODI1,BP_diastolic,PhysicalExam,physical05,,,"GENDER""1""->75; GENDER""2""->74",,done
+BPXO_L,BPXOPLS1,pulse,PhysicalExam,physical06,,,"GENDER""1""->69; GENDER""2""->72",,done
+DPQ_L,DPQ010,PHQ1,Target,target01,,7&9->0,,,1
+DPQ_L,DPQ020,PHQ2,Target,target02,,7&9->0,,,1
+DPQ_L,DPQ030,PHQ3,Target,target03,,7&9->0,,,1
+DPQ_L,DPQ040,PHQ4,Target,target04,,7&9->0,,,1
+DPQ_L,DPQ050,PHQ5,Target,target05,,7&9->0,,,1
+DPQ_L,DPQ060,PHQ6,Target,target06,,7&9->0,,,1
+DPQ_L,DPQ070,PHQ7,Target,target07,,7&9->0,,,1
+DPQ_L,DPQ080,PHQ8,Target,target08,,7&9->0,,,1
+DPQ_L,DPQ090,PHQ9,Target,target09,,7&9->0,,,1
+DPQ_L,DPQ100,PHQ10,Target,target10,dropped,,,,
