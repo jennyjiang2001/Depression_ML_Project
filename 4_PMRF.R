@@ -28,7 +28,7 @@ library(psych)
 library(GPArotation)    
 library(vip)          
 
-phqs <- read.csv("final_merged.csv", header = TRUE)  
+phqs <- read.csv("final_merged_phq1_9.csv", header = TRUE)  
 phqs <- phqs[, 55:63] # read in phq 1-9
 print(phqs)                                         
 
